@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Services{% endblock %}
+{% form_theme formService 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+<div class="container">
+    
+    <center>
+        <h2>Liste des services</h2>
+   
+        <table class="table table-striped table-bordered" style="width: 50%">
+            <thead>
+                <th>Nom du service</th>   
+                <th></th>
+            </thead>
+
+            <tbody>
+                {% for type in services %}   
+                <tr>
+                    <td>{{type.libelle}}</td>
+                    <td><a href="{{ path('edit_serv',{'id':type.id})}}"><button class="btn btn-outline-info">Modifier</button></a></td>            
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </center>
+</div>
+
+<center>
+    <h4>Ajout de service</h4>
+    {{ form_start(formService)}}
+    <div class="form-group col-sm-2">
+        {{ form_row(formService.libelle)}}
+        {{ form_rest(formService) }}
+        <button type="submit" class="btn btn-success">
+            {% if monButton %}
+                Modifier
+            {% else %}
+                Ajouter
+            {% endif %}
+        </button>
+        {{ form_end(formService) }}
+    </div>
+</center>      
+       
+
+{% endblock %}

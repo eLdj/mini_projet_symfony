@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion Employés{% endblock %}
+{% form_theme formEmploye 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+    <center>
+        <h2>Gestion des Employés</h2>
+    
+        <div class="form-group col-sm-4">
+            {{ form_start(formEmploye)}}
+        
+            {{ form_row(formEmploye.matricule)}}
+            {{ form_row(formEmploye.nomComplet)}}
+        </div>
+        <div class="form-group col-sm-3">
+            {{ form_row(formEmploye.dateNaissance)}}
+            {{ form_row(formEmploye.salaire)}}
+            {{ form_row(formEmploye.idService)}}
+            {{ form_rest(formEmploye) }}
+            <button type="submit" class="btn btn-success">
+                {% if monButton %}
+                    Modifier
+                {% else %}
+                    Ajouter
+                {% endif %}
+            </button>
+            {{ form_end(formEmploye) }}
+
+        </div>     
+    </center> 
+{% endblock %}
