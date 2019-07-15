@@ -44,18 +44,20 @@ class EntController extends AbstractController
                      ->add('nomComplet')
                      ->add('dateNaissance',DateType::class, [
                          'widget'=>'single_text',
-                         'format'=>'yyyy-MM-dd'
-                     ])
+                         'format'=>'yyyy-MM-dd',
+                         'required' => false,
+                         'empty_data' => '*'
+                        ])
                      ->add('salaire')
                      ->add('idService',EntityType::class,[
                             'class'=> Service::class,
                             'choice_label'=>'libelle',
-                     ])
+                        ])
                      ->getForm();
         
                      $form->handleRequest($request);
 
-        if($form->isSubmitted())
+        if($form->isSubmitted() && $form->isValid())
         {
             $manager->persist($employe);
             $manager->flush();
@@ -64,7 +66,7 @@ class EntController extends AbstractController
 
 
         return $this->render('ent/gestemp.html.twig', [
-            'formEmploye' => $form->createView(),
+            'FormEmploye' => $form->createView(),
             'monButton' => $employe->getId() !== null
         ]);
     }
@@ -103,7 +105,7 @@ class EntController extends AbstractController
 
                       $form->handleRequest($request);
 
-        if($form->isSubmitted())
+        if($form->isSubmitted() && $form->isValid())
         {
             $manager->persist($service);
             $manager->flush();

@@ -1,23 +1,22 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Gestion Employés{% endblock %}
-{% form_theme formEmploye 'bootstrap_4_layout.html.twig' %}
+{% form_theme FormEmploye 'bootstrap_4_layout.html.twig' %}
 
 {% block body %}
     <center>
         <h2>Gestion des Employés</h2>
     
         <div class="form-group col-sm-4">
-            {{ form_start(formEmploye)}}
-        
-            {{ form_row(formEmploye.matricule)}}
-            {{ form_row(formEmploye.nomComplet)}}
+            {{ form_start(FormEmploye, {'attr': {'novalidate':'novalidate'}}) }}
+            {{ form_row(FormEmploye.matricule,{'attr':{'placeholder':'Entrez un matricule'}} )}}
+            {{ form_row(FormEmploye.nomComplet,{'attr':{'placeholder':'Entrez un prénom et un nom'}})}}
         </div>
         <div class="form-group col-sm-3">
-            {{ form_row(formEmploye.dateNaissance)}}
-            {{ form_row(formEmploye.salaire)}}
-            {{ form_row(formEmploye.idService)}}
-            {{ form_rest(formEmploye) }}
+            {{ form_row(FormEmploye.dateNaissance, {'attr': {'novalidate':'novalidate'}}) }}
+            {{ form_row(FormEmploye.salaire,{'attr':{'placeholder':'Allouez un salaire'}}) }}
+            {{ form_row(FormEmploye.idService,{'attr':{'label':'Service'}} )}}
+            {{ form_rest(FormEmploye) }}
             <button type="submit" class="btn btn-success">
                 {% if monButton %}
                     Modifier
@@ -25,7 +24,7 @@
                     Ajouter
                 {% endif %}
             </button>
-            {{ form_end(formEmploye) }}
+            {{ form_end(FormEmploye) }}
 
         </div>     
     </center> 

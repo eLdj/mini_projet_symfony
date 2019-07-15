@@ -131,7 +131,7 @@ class __TwigTemplate_9a824a69a4da40b39d7f4ba85804758886345862b0c8fe560bf134e0b84
     <h4>Ajout de service</h4>
     ";
         // line 32
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formService"]) || array_key_exists("formService", $context) ? $context["formService"] : (function () { throw new RuntimeError('Variable "formService" does not exist.', 32, $this->source); })()), 'form_start');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formService"]) || array_key_exists("formService", $context) ? $context["formService"] : (function () { throw new RuntimeError('Variable "formService" does not exist.', 32, $this->source); })()), 'form_start', ["attr" => ["novalidate" => "novalidate"]]);
         echo "
     <div class=\"form-group col-sm-2\">
         ";
@@ -221,7 +221,7 @@ class __TwigTemplate_9a824a69a4da40b39d7f4ba85804758886345862b0c8fe560bf134e0b84
 
 <center>
     <h4>Ajout de service</h4>
-    {{ form_start(formService)}}
+    {{ form_start(formService,{'attr': {'novalidate':'novalidate'}}) }}
     <div class=\"form-group col-sm-2\">
         {{ form_row(formService.libelle)}}
         {{ form_rest(formService) }}

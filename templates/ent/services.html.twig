@@ -29,7 +29,7 @@
 
 <center>
     <h4>Ajout de service</h4>
-    {{ form_start(formService)}}
+    {{ form_start(formService,{'attr': {'novalidate':'novalidate'}}) }}
     <div class="form-group col-sm-2">
         {{ form_row(formService.libelle)}}
         {{ form_rest(formService) }}

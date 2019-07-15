@@ -12,7 +12,7 @@
                     'App\\Repository\\EmployeRepository',
                 ],
                 'message' => [
-                    1 => 'Ce matricumle existe déjà.',
+                    1 => 'Ce matricumle existe déjà',
                 ],
                 'fields' => [
                     1 => 'matricule',

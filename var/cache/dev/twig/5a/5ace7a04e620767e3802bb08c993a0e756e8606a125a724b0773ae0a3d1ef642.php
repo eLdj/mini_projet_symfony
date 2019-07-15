@@ -27,6 +27,7 @@ class __TwigTemplate_a190a28103f4d35c84b9f7b7cb20d76d2e5193a86d55b8c99536f58c291
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
+            'javascripts' => [$this, 'block_javascripts'],
         ];
     }
 
@@ -88,9 +89,9 @@ class __TwigTemplate_a190a28103f4d35c84b9f7b7cb20d76d2e5193a86d55b8c99536f58c291
         echo "
 <div class=\"container\">
     
-    <center><h2>Liste des employée</h2></center>
+    <center><h2>Liste des employés</h2></center>
    
-    <table class=\"table table-striped table-bordered\" style=\"width: 100%\">
+    <table class=\"table table-striped table-bordered\" id=\"table\" style=\"width: 100%\">
         <thead>
             <th>Matricule</th>
             <th>Nom</th>
@@ -147,6 +148,32 @@ class __TwigTemplate_a190a28103f4d35c84b9f7b7cb20d76d2e5193a86d55b8c99536f58c291
     </table>
 </div>
 ";
+        // line 36
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 39
+        echo "   
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 36
+    public function block_javascripts($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 37
+        echo " 
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -167,7 +194,7 @@ class __TwigTemplate_a190a28103f4d35c84b9f7b7cb20d76d2e5193a86d55b8c99536f58c291
 
     public function getDebugInfo()
     {
-        return array (  146 => 33,  137 => 30,  133 => 29,  129 => 28,  125 => 27,  121 => 26,  117 => 25,  113 => 24,  106 => 22,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  175 => 37,  165 => 36,  154 => 39,  152 => 36,  147 => 33,  138 => 30,  134 => 29,  130 => 28,  126 => 27,  122 => 26,  118 => 25,  114 => 24,  107 => 22,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -180,9 +207,9 @@ class __TwigTemplate_a190a28103f4d35c84b9f7b7cb20d76d2e5193a86d55b8c99536f58c291
 
 <div class=\"container\">
     
-    <center><h2>Liste des employée</h2></center>
+    <center><h2>Liste des employés</h2></center>
    
-    <table class=\"table table-striped table-bordered\" style=\"width: 100%\">
+    <table class=\"table table-striped table-bordered\" id=\"table\" style=\"width: 100%\">
         <thead>
             <th>Matricule</th>
             <th>Nom</th>
@@ -207,6 +234,10 @@ class __TwigTemplate_a190a28103f4d35c84b9f7b7cb20d76d2e5193a86d55b8c99536f58c291
         </tbody>
     </table>
 </div>
+{% block javascripts %}
+ 
+{% endblock %}
+   
 {% endblock %}
 
 ", "ent/all.html.twig", "/home/mister_d/entreprise/templates/ent/all.html.twig");

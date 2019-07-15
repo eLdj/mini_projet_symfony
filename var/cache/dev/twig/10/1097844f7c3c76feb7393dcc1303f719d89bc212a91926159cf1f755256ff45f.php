@@ -53,10 +53,13 @@ class __TwigTemplate_bba37f563a5e776d38bf009e5eb5758fe244c8d7e87958a2d3f9274361d
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
         <link rel=\"stylesheet\" href=\"https://bootswatch.com/4/cosmo/bootstrap.min.css\">
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css\">
+        <script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js\"></script>
+
         ";
-        // line 7
+        // line 10
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 8
+        // line 11
         echo "    </head>
     <body>
         <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
@@ -69,19 +72,19 @@ class __TwigTemplate_bba37f563a5e776d38bf009e5eb5758fe244c8d7e87958a2d3f9274361d
                 <ul class=\"navbar-nav mr-auto\">
                     <li class=\"nav-item\">
                         <a class=\"nav-link\" href=\"";
-        // line 19
+        // line 22
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("all");
         echo "\">Acceuil</a>
                     </li>
                     <li class=\"nav-item\">
                         <a class=\"nav-link\" href=\"";
-        // line 22
+        // line 25
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("gestemp");
         echo "\">Gestion Employés</a>
                     </li>
                     <li class=\"nav-item\">
                         <a class=\"nav-link\" href=\"";
-        // line 25
+        // line 28
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("gestServ");
         echo "\">Gestion Services</a>
                     </li>
@@ -90,15 +93,16 @@ class __TwigTemplate_bba37f563a5e776d38bf009e5eb5758fe244c8d7e87958a2d3f9274361d
         </nav>
         <div class=\"container\">
             ";
-        // line 31
+        // line 34
         $this->displayBlock('body', $context, $blocks);
-        // line 32
+        // line 35
         echo "        </div>
         ";
-        // line 33
+        // line 36
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 34
-        echo "    </body>
+        // line 37
+        echo " 
+    </body>
 </html>
 ";
         
@@ -128,7 +132,7 @@ class __TwigTemplate_bba37f563a5e776d38bf009e5eb5758fe244c8d7e87958a2d3f9274361d
 
     }
 
-    // line 7
+    // line 10
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -146,7 +150,7 @@ class __TwigTemplate_bba37f563a5e776d38bf009e5eb5758fe244c8d7e87958a2d3f9274361d
 
     }
 
-    // line 31
+    // line 34
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -164,7 +168,7 @@ class __TwigTemplate_bba37f563a5e776d38bf009e5eb5758fe244c8d7e87958a2d3f9274361d
 
     }
 
-    // line 33
+    // line 36
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -194,7 +198,7 @@ class __TwigTemplate_bba37f563a5e776d38bf009e5eb5758fe244c8d7e87958a2d3f9274361d
 
     public function getDebugInfo()
     {
-        return array (  168 => 33,  150 => 31,  132 => 7,  113 => 5,  101 => 34,  99 => 33,  96 => 32,  94 => 31,  85 => 25,  79 => 22,  73 => 19,  60 => 8,  58 => 7,  53 => 5,  47 => 1,);
+        return array (  172 => 36,  154 => 34,  136 => 10,  117 => 5,  104 => 37,  102 => 36,  99 => 35,  97 => 34,  88 => 28,  82 => 25,  76 => 22,  63 => 11,  61 => 10,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -205,6 +209,9 @@ class __TwigTemplate_bba37f563a5e776d38bf009e5eb5758fe244c8d7e87958a2d3f9274361d
         <meta charset=\"UTF-8\">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel=\"stylesheet\" href=\"https://bootswatch.com/4/cosmo/bootstrap.min.css\">
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css\">
+        <script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js\"></script>
+
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
@@ -232,6 +239,7 @@ class __TwigTemplate_bba37f563a5e776d38bf009e5eb5758fe244c8d7e87958a2d3f9274361d
             {% block body %}{% endblock %}
         </div>
         {% block javascripts %}{% endblock %}
+ 
     </body>
 </html>
 ", "base.html.twig", "/home/mister_d/entreprise/templates/base.html.twig");

@@ -4,6 +4,9 @@
         $o = [
             clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
             clone ($p['Symfony\\Component\\Validator\\Constraints\\Date'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\Date')),
+            clone ($p['Symfony\\Component\\Validator\\Constraints\\LessThan'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\LessThan')),
+            clone ($p['Symfony\\Component\\Validator\\Constraints\\GreaterThan'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\GreaterThan')),
+            clone ($p['Symfony\\Component\\Validator\\Constraints\\NotBlank'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\NotBlank')),
         ],
         null,
         [
@@ -15,12 +18,33 @@
                     1 => [
                         'Default',
                     ],
+                    [
+                        'Default',
+                    ],
+                    [
+                        'Default',
+                    ],
+                    [
+                        'Default',
+                    ],
+                ],
+                'message' => [
+                    2 => 'Vous êtes mineur',
+                    'Trop vieux pour ce job',
+                    'La date de naissance est obligatoire',
+                ],
+                'value' => [
+                    2 => '2005/12/31',
+                    '1957/12/31',
                 ],
             ],
         ],
         [
             $o[0],
             $o[1],
+            $o[2],
+            $o[3],
+            $o[4],
         ],
         []
     );

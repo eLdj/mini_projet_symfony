@@ -46,7 +46,7 @@ class __TwigTemplate_81d7fc4eb3d02698421e756e0409096bb9aebdfd37d2339fe2c308e541d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "ent/gestemp.html.twig"));
 
         // line 4
-        $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["formEmploye"]) || array_key_exists("formEmploye", $context) ? $context["formEmploye"] : (function () { throw new RuntimeError('Variable "formEmploye" does not exist.', 4, $this->source); })()), [0 => "bootstrap_4_layout.html.twig"], true);
+        $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["FormEmploye"]) || array_key_exists("FormEmploye", $context) ? $context["FormEmploye"] : (function () { throw new RuntimeError('Variable "FormEmploye" does not exist.', 4, $this->source); })()), [0 => "bootstrap_4_layout.html.twig"], true);
         // line 1
         $this->parent = $this->loadTemplate("base.html.twig", "ent/gestemp.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
@@ -94,52 +94,51 @@ class __TwigTemplate_81d7fc4eb3d02698421e756e0409096bb9aebdfd37d2339fe2c308e541d
         <div class=\"form-group col-sm-4\">
             ";
         // line 11
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formEmploye"]) || array_key_exists("formEmploye", $context) ? $context["formEmploye"] : (function () { throw new RuntimeError('Variable "formEmploye" does not exist.', 11, $this->source); })()), 'form_start');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["FormEmploye"]) || array_key_exists("FormEmploye", $context) ? $context["FormEmploye"] : (function () { throw new RuntimeError('Variable "FormEmploye" does not exist.', 11, $this->source); })()), 'form_start', ["attr" => ["novalidate" => "novalidate"]]);
         echo "
-        
+            ";
+        // line 12
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["FormEmploye"]) || array_key_exists("FormEmploye", $context) ? $context["FormEmploye"] : (function () { throw new RuntimeError('Variable "FormEmploye" does not exist.', 12, $this->source); })()), "matricule", [], "any", false, false, false, 12), 'row', ["attr" => ["placeholder" => "Entrez un matricule"]]);
+        echo "
             ";
         // line 13
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formEmploye"]) || array_key_exists("formEmploye", $context) ? $context["formEmploye"] : (function () { throw new RuntimeError('Variable "formEmploye" does not exist.', 13, $this->source); })()), "matricule", [], "any", false, false, false, 13), 'row');
-        echo "
-            ";
-        // line 14
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formEmploye"]) || array_key_exists("formEmploye", $context) ? $context["formEmploye"] : (function () { throw new RuntimeError('Variable "formEmploye" does not exist.', 14, $this->source); })()), "nomComplet", [], "any", false, false, false, 14), 'row');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["FormEmploye"]) || array_key_exists("FormEmploye", $context) ? $context["FormEmploye"] : (function () { throw new RuntimeError('Variable "FormEmploye" does not exist.', 13, $this->source); })()), "nomComplet", [], "any", false, false, false, 13), 'row', ["attr" => ["placeholder" => "Entrez un prénom et un nom"]]);
         echo "
         </div>
         <div class=\"form-group col-sm-3\">
             ";
+        // line 16
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["FormEmploye"]) || array_key_exists("FormEmploye", $context) ? $context["FormEmploye"] : (function () { throw new RuntimeError('Variable "FormEmploye" does not exist.', 16, $this->source); })()), "dateNaissance", [], "any", false, false, false, 16), 'row', ["attr" => ["novalidate" => "novalidate"]]);
+        echo "
+            ";
         // line 17
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formEmploye"]) || array_key_exists("formEmploye", $context) ? $context["formEmploye"] : (function () { throw new RuntimeError('Variable "formEmploye" does not exist.', 17, $this->source); })()), "dateNaissance", [], "any", false, false, false, 17), 'row');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["FormEmploye"]) || array_key_exists("FormEmploye", $context) ? $context["FormEmploye"] : (function () { throw new RuntimeError('Variable "FormEmploye" does not exist.', 17, $this->source); })()), "salaire", [], "any", false, false, false, 17), 'row', ["attr" => ["placeholder" => "Allouez un salaire"]]);
         echo "
             ";
         // line 18
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formEmploye"]) || array_key_exists("formEmploye", $context) ? $context["formEmploye"] : (function () { throw new RuntimeError('Variable "formEmploye" does not exist.', 18, $this->source); })()), "salaire", [], "any", false, false, false, 18), 'row');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["FormEmploye"]) || array_key_exists("FormEmploye", $context) ? $context["FormEmploye"] : (function () { throw new RuntimeError('Variable "FormEmploye" does not exist.', 18, $this->source); })()), "idService", [], "any", false, false, false, 18), 'row', ["attr" => ["label" => "Service"]]);
         echo "
             ";
         // line 19
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formEmploye"]) || array_key_exists("formEmploye", $context) ? $context["formEmploye"] : (function () { throw new RuntimeError('Variable "formEmploye" does not exist.', 19, $this->source); })()), "idService", [], "any", false, false, false, 19), 'row');
-        echo "
-            ";
-        // line 20
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["formEmploye"]) || array_key_exists("formEmploye", $context) ? $context["formEmploye"] : (function () { throw new RuntimeError('Variable "formEmploye" does not exist.', 20, $this->source); })()), 'rest');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["FormEmploye"]) || array_key_exists("FormEmploye", $context) ? $context["FormEmploye"] : (function () { throw new RuntimeError('Variable "FormEmploye" does not exist.', 19, $this->source); })()), 'rest');
         echo "
             <button type=\"submit\" class=\"btn btn-success\">
                 ";
-        // line 22
-        if ((isset($context["monButton"]) || array_key_exists("monButton", $context) ? $context["monButton"] : (function () { throw new RuntimeError('Variable "monButton" does not exist.', 22, $this->source); })())) {
-            // line 23
+        // line 21
+        if ((isset($context["monButton"]) || array_key_exists("monButton", $context) ? $context["monButton"] : (function () { throw new RuntimeError('Variable "monButton" does not exist.', 21, $this->source); })())) {
+            // line 22
             echo "                    Modifier
                 ";
         } else {
-            // line 25
+            // line 24
             echo "                    Ajouter
                 ";
         }
-        // line 27
+        // line 26
         echo "            </button>
             ";
-        // line 28
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formEmploye"]) || array_key_exists("formEmploye", $context) ? $context["formEmploye"] : (function () { throw new RuntimeError('Variable "formEmploye" does not exist.', 28, $this->source); })()), 'form_end');
+        // line 27
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["FormEmploye"]) || array_key_exists("FormEmploye", $context) ? $context["FormEmploye"] : (function () { throw new RuntimeError('Variable "FormEmploye" does not exist.', 27, $this->source); })()), 'form_end');
         echo "
 
         </div>     
@@ -165,7 +164,7 @@ class __TwigTemplate_81d7fc4eb3d02698421e756e0409096bb9aebdfd37d2339fe2c308e541d
 
     public function getDebugInfo()
     {
-        return array (  142 => 28,  139 => 27,  135 => 25,  131 => 23,  129 => 22,  124 => 20,  120 => 19,  116 => 18,  112 => 17,  106 => 14,  102 => 13,  97 => 11,  91 => 7,  81 => 6,  62 => 3,  51 => 1,  49 => 4,  36 => 1,);
+        return array (  141 => 27,  138 => 26,  134 => 24,  130 => 22,  128 => 21,  123 => 19,  119 => 18,  115 => 17,  111 => 16,  105 => 13,  101 => 12,  97 => 11,  91 => 7,  81 => 6,  62 => 3,  51 => 1,  49 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -173,23 +172,22 @@ class __TwigTemplate_81d7fc4eb3d02698421e756e0409096bb9aebdfd37d2339fe2c308e541d
         return new Source("{% extends 'base.html.twig' %}
 
 {% block title %}Gestion Employés{% endblock %}
-{% form_theme formEmploye 'bootstrap_4_layout.html.twig' %}
+{% form_theme FormEmploye 'bootstrap_4_layout.html.twig' %}
 
 {% block body %}
     <center>
         <h2>Gestion des Employés</h2>
     
         <div class=\"form-group col-sm-4\">
-            {{ form_start(formEmploye)}}
-        
-            {{ form_row(formEmploye.matricule)}}
-            {{ form_row(formEmploye.nomComplet)}}
+            {{ form_start(FormEmploye, {'attr': {'novalidate':'novalidate'}}) }}
+            {{ form_row(FormEmploye.matricule,{'attr':{'placeholder':'Entrez un matricule'}} )}}
+            {{ form_row(FormEmploye.nomComplet,{'attr':{'placeholder':'Entrez un prénom et un nom'}})}}
         </div>
         <div class=\"form-group col-sm-3\">
-            {{ form_row(formEmploye.dateNaissance)}}
-            {{ form_row(formEmploye.salaire)}}
-            {{ form_row(formEmploye.idService)}}
-            {{ form_rest(formEmploye) }}
+            {{ form_row(FormEmploye.dateNaissance, {'attr': {'novalidate':'novalidate'}}) }}
+            {{ form_row(FormEmploye.salaire,{'attr':{'placeholder':'Allouez un salaire'}}) }}
+            {{ form_row(FormEmploye.idService,{'attr':{'label':'Service'}} )}}
+            {{ form_rest(FormEmploye) }}
             <button type=\"submit\" class=\"btn btn-success\">
                 {% if monButton %}
                     Modifier
@@ -197,7 +195,7 @@ class __TwigTemplate_81d7fc4eb3d02698421e756e0409096bb9aebdfd37d2339fe2c308e541d
                     Ajouter
                 {% endif %}
             </button>
-            {{ form_end(formEmploye) }}
+            {{ form_end(FormEmploye) }}
 
         </div>     
     </center> 

@@ -8,7 +8,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\EmployeRepository")
- * @UniqueEntity(fields="matricule", message="Ce matricumle existe déjà.")
+ * @UniqueEntity(fields="matricule", message="Ce matricumle existe déjà")
  */
 class Employe
 {
@@ -20,28 +20,34 @@ class Employe
     private $id;
 
     /**
-     * @var string
-     * 
      * @ORM\Column(name="matricule" , type="string", length=30, unique=true)
-     * @Assert\Length(min=7, max=7, minMessage = "Le matricule doit comporter 7 caractére")
+     * @Assert\Length(max=7,min=7, minMessage = "Le matricule doit comporter {{limit}} caractére",maxMessage = "Le matricule doit comporter {{limit}} caractére")
+     * @Assert\NotBlank(message="Le matricule est obligatoire")
      */
     private $matricule;
 
     /**
      * @ORM\Column(type="string", length=30)
      * @Assert\Length(min=4, minMessage = "Veuillez entrer un nom valide")
+     * @Assert\NotBlank(message="Le nom complet est obligatoire")
      */
     private $nomComplet;
 
     /**
      * @ORM\Column(type="date")
      * @Assert\Date()
+     * @Assert\LessThan("2005/12/31",message="Vous êtes mineur")
+     * @Assert\GreaterThan("1957/12/31",message="Trop vieux pour ce job")
+     * @Assert\NotBlank(message="La date de naissance est obligatoire")
      */
     private $dateNaissance;
 
     /**
      * @ORM\Column(type="integer")
-     * @Assert\Positive()
+     * @Assert\Positive(message="Le salaire ne peut être négatif")
+     * @Assert\GreaterThan(50000, message="Le salaire doit être suppérieur à 50 000")
+     * @Assert\LessThan(500000, message="Diambar li barri na dhé ")
+     * @Assert\NotBlank(message="Le salaire est obligatoire")
      */
     private $salaire;
 
